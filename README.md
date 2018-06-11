@@ -1,6 +1,7 @@
 # Mongoscraper
 
 ## Hosted on Heroku
+http://babylonbee-mongo-scraper.herokuapp.com/
 
 ## Github Repo
 https://github.com/m-gilman/mongoscraper
