@@ -1,0 +1,30 @@
+{
+  "name": "mongoscraper",
+  "version": "1.0.0",
+  "description": "A Mongo Scraper that scrapes articles from a satirical evangelical Christian website, The Babylon Bee ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-gilman/mongoscraper.git"
+  },
+  "keywords": [
+    "Node/NPM",
+    "Javascript",
+    "jQuery/AJAX",
+    "Mongo/Mongoose",
+    "Handlebars",
+    "Express",
+    "Body-parser",
+    "Request",
+    "Cheerio.js"
+  ],
+  "author": "Melissa Gilman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-gilman/mongoscraper/issues"
+  },
+  "homepage": "https://github.com/m-gilman/mongoscraper#readme"
+}
