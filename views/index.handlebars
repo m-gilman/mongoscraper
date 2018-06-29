@@ -1,0 +1,43 @@
+<div class="row text-center">
+    <div class="col">
+        <h1 class="text-white">Burger Restaurant!</h1>
+        <hr>
+    </div>
+</div>
+
+<div class="container text-white">
+    <div class="row text-center">
+        <div class="col">
+            <h2>Order Here!</h2>
+            <p>What Kind of Burger Would You Like?</p>
+
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="ca" name="burger_name" placeholder="... Burger">
+                    <button type="submit" class="addBurgerButton">Place Your Order</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="row text-white">
+    <div class="col">
+        <h2>Order Up!</h2>
+        <p>These Burgers Are Ready To Eat:</p>
+        <ul>
+            {{#each burgers}} {{#unless this.devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+        </ul>
+    </div>
+
+
+    <div class="col">
+        <h2>All Gone!</h2>
+        <p>These Burgers Have Been Eaten</p>
+        <ul>
+            {{#each burgers}} {{#if this.devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+        </ul>
+    </div>
