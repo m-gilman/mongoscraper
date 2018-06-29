@@ -9,8 +9,15 @@ var NoteSchema = new Schema({
   // `title` is of type String
   title: String,
   // `body` is of type String
-  body: String
+  text: String,
+  
+  
+  // job: {
+    // type: Schema.Types.ObjectId,
+    // ref: "Job"
+  // }
 });
+
 
 // This creates our model from the above schema, using mongoose's model method
 var Note = mongoose.model("Note", NoteSchema);
