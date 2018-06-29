@@ -1,7 +1,7 @@
 # Mongoscraper
 
 ## Hosted on Heroku
-http://mongo-job-scraper.herokuapp.com/
+https://melissa-job-scraper.herokuapp.com/
 
 ## Github Repo
 https://github.com/m-gilman/mongoscraper
