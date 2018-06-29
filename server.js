@@ -1,25 +1,25 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
-var logger = require("morgan");
-var mongoose = require("mongoose");
+const express = require("express");
+const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars");
+const logger = require("morgan");
+const mongoose = require("mongoose");
 
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
-var axios = require("axios");
-var cheerio = require("cheerio");
+const axios = require("axios");
+const cheerio = require("cheerio");
 const request = require('request');
 
 
-var PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Initialize Express
-var app = express();
+const app = express();
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/jobScraper";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/jobScraper";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/controller");
+const routes = require("./controllers/controller");
 
 app.use(routes);
 app.use('/', routes);
