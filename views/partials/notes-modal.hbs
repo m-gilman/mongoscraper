@@ -1,0 +1,42 @@
+<!--Notes Modal-->
+<div class="modal" id="noteModal{{_id}}" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Notes for:
+                    <br>{{title}}</h5>
+                <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{#if notes}} {{#each notes}}
+                <div class="panel panel-default">
+                    <div class="panel-body mb-2">
+                        <button type="button" class="btn btn-pink deleteNote" data-note-id={{_id}} data-job-id={{job}}>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <span class="note-headline"> {{this.title}} </span>
+                        <p>{{this.text}}</p>
+                    </div>
+                </div>
+                {{/each}} {{else}}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>No notes for this job.</h4>
+                    </div>
+                </div>
+                {{/if}} {{!-- add a new note --}}
+                <div class="form-group">
+                    <p>Create A New Note: </p>
+                    <input type="text" id="noteTitle{{_id}}" class="titleInput mb-2" placeholder="Title">
+                    <textarea id="noteText{{_id}}" class="form-control textInput" rows="4" placeholder="New Note"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary saveNote" id={{_id}}>Save Note</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

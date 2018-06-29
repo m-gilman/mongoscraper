@@ -1,0 +1,34 @@
+{{!--
+<div> --}} {{!-- Subtitle --}}
+	<div class="container justify-content-center">
+		<h2>All Saved Jobs</h2>
+	</div>
+
+	{{!-- <button type="button" id="clear-saved" class="btn btn-pink my-1">Clear All Saved Jobs</button> --}}
+
+
+	<p>Click <i class="fas fa-trash-alt"></i> to remove a job. 
+	<br/> Click <i class="fas fa-pencil-alt"></i> to add notes.</p>
+
+</div>
+
+
+{{!-- Navbar --}} {{> navbar}}
+
+<div class="container-fluid page-content py-2">
+	<div class=row>
+		<div class="col">
+
+			{{#if jobs}} {{#each jobs}} {{> jobs-card}} {{> notes-modal }} {{/each}} {{else}}
+
+
+			<div class="card text-white bg-custom-color p-1 ">
+				<div class="card-body text-center ">
+					<h3>No Saved Jobs. Click <i class="far fa-star"></i> to save jobs.</h3>
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</div>
+

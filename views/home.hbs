@@ -1,0 +1,55 @@
+{{!--
+<div> --}} {{!-- Subtitle --}}
+	<div class="container justify-content-center">
+		<p>As a budding web developer beginning my job search, I created this site to research job opportunities.
+			<br/>Click the Scrape button below to add more job postings to this page.
+		</p>
+	</div>
+
+
+	{{!-- SearchNScrape Inputs: Job Type & Location --}}
+	<div class="container">
+		{{!--
+		<div class="row justify-content-center">
+			<form class="form-inline" action="/action_page.php">
+				<label for="jobType">Job Type:</label>
+				<input type="text" class="form-control border border-secondary" value="Web Developer" id="jobType">
+				<label class="ml-3" for="location">Location:</label>
+				<input type="text" class="form-control border border-secondary" value="remote" id="location">
+			</form>
+		</div> --}}
+	</div>
+	<div class="search-btn">
+		<button type="button" id="scrape-new" class="btn my-1">
+			{{!--
+			<a href="/scrape"> --}} Search for Jobs {{!-- </a> --}}
+		</button>
+		{{!--
+		<button type="button" class="btn btn-pink my-1">Clear Jobs</button> --}}
+		<p class="patience">Have patience, this takes a minute.</p>
+	</div>
+
+	<p>The Scrape button searches indeed.com for Web Developer jobs</p>
+	{{!-- This seemingly extra closing div closes off the open div on the main layout page --}}
+</div>
+
+
+{{!-- Navbar --}} {{> navbar}}
+
+<div class="container-fluid page-content py-2">
+	<div class=row>
+		<div class="col">
+
+			{{#if jobs}} <p>Click the <i class="far fa-star"></i> to save a job</p>{{#each jobs}} {{> jobs-card}} {{/each}} {{else}}
+			<div class="card text-white bg-custom-color p-1 ">
+				<div class="card-body text-center ">
+					<h3>Click "Scrape New Jobs " above.</h3>
+				</div>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</div>
+
+
+{{> scrape-modal}}

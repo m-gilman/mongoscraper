@@ -1,0 +1,25 @@
+<div class="card">
+	<div class="card-header bg-custom pt-3">
+		<h3 class="card-title">
+
+			{{#unless this.isSaved}}
+			<button id="{{_id}}" class="btn btn-pink mr-1 save">
+				<i class="far fa-star"></i>
+			</button>
+			{{/unless}} {{#if this.isSaved}}
+			<button id="{{_id}}" class="btn btn-pink delete ">
+				<i class="fas fa-trash-alt"></i>
+			</button>
+			<button id="{{_id}}" class="btn btn-pink notes" data-toggle="modal" data-target="#noteModal{{this._id}}">
+				<i class="fas fa-pencil-alt"></i>
+			</button>
+			{{/if}}
+			<a class="job-link" target="_blank" href="https://www.indeed.com/{{link}}"> {{title}} </a>
+
+		</h3>
+	</div>
+	<div class="card-body">
+		<p>{{companyName}} - {{location}} </p>
+	</div>
+</div>
+
