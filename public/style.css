@@ -1,0 +1,144 @@
+/* * {
+    outline: 1px solid red !important;
+  } */
+
+/* font-family: 'Clicker Script', cursive; */
+/* font-family: 'EB Garamond', serif; */
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+.btn-pink {
+    background: #F28282;
+    color: black;
+    border: #343a40 solid 2px;
+    text-decoration-line: none;    
+}
+
+.btn-pink:hover {
+    background: rgb(236, 165, 165);
+}
+
+.patience {
+    display: none;
+    background-color: #eca5a5;
+    padding: 5px;
+}
+
+.search-btn:hover p {
+    display: block;
+}
+
+
+#scrape-new {
+    background: #F28282;
+    color: black;
+    border: #343a40 solid 2px;
+    text-decoration-line: none;    
+}
+
+#scrape-new:hover {
+    background: #eca5a5;
+}
+
+#scrape-new:active {
+    color: white;
+    background: rgb(53, 14, 14);
+}
+
+
+.delete-btn:hover {
+    background: rgb(236, 165, 165);
+    font-size: 20px;
+}
+
+
+.jumbotron {
+    font-size: 1vw;
+    padding: 1rem 2rem;
+}
+
+.maintitle {
+    font-size: 500%;
+    font-family: 'Clicker Script', cursive;    
+    font-weight: 700;
+}
+
+.bg-custom-color {
+    background: #F28282
+}
+
+.bg-custom {
+    background: #8f99a3;
+}
+
+.card {
+    margin: 3px;
+    border: 1px solid #8f99a3;
+}
+
+.card-header {
+    padding: .25rem 1.25rem 0rem 1.25rem;
+    line-height: 0;
+}
+
+.card-body {
+    padding-bottom: 0;
+}
+
+.job-link {
+    font-size: 20px;
+}
+
+.page-content {
+    /* background: #8f99a3; */
+    padding:10px;
+    margin-bottom:60px;   /* Height of the footer */
+}
+
+.form-group {
+    border: 2px solid #343a40;
+    border-radius: 2%;
+    /* background: #343a40; */
+    /* color: white; */
+    padding: 10px;
+}
+
+.textInput {
+    border: #8f99a3 solid 1px;
+}
+
+.modal-header {
+    background: #343a40;
+    color: white;
+}
+
+.note-headline {
+    font-weight: Bold;
+    font-size: 20px;
+}
+
+.modal-body {
+    padding: 0px 5px;
+}
+
+.btn-close{
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 30px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
