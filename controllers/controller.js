@@ -27,7 +27,7 @@ app.get('/saved', (req, res, next) => {
 });
 
 
-let scrapeURL = "https://www.indeed.com/jobs?q=web+developer&l=remote";
+let scrapeURL = "https://www.indeed.com/jobs?q=web+developer&l=";
 
 // A GET route for scraping the echoJS website
 app.get("/scrape", (req, res) => {
